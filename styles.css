@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Shopping</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#fruits">Fruits</a></li>
+            <li><a href="#vegetables">Vegetables</a></li>
+            <li><a href="#dairy">Dairy</a></li>
+            <li><a href="#clothing">Clothing</a></li>
+            <li><a href="#cosmetics">Cosmetics</a></li>
+        </ul>
+    </nav>
+    <section id="fruits">
+        <h2>Fruits</h2>
+        <div class="item">Apples</div>
+        <div class="item">Bananas</div>
+        <div class="item">Oranges</div>
+    </section>
+    <section id="vegetables">
+        <h2>Vegetables</h2>
+        <div class="item">Tomatoes</div>
+        <div class="item">Carrots</div>
+        <div class="item">Spinach</div>
+    </section>
+    <section id="dairy">
+        <h2>Dairy Products</h2>
+        <div class="item">Milk</div>
+        <div class="item">Cheese</div>
+        <div class="item">Yogurt</div>
+    </section>
+    <section id="clothing">
+        <h2>Clothing</h2>
+        <div class="item">Men's Shirts</div>
+        <div class="item">Women's Dresses</div>
+        <div class="item">Kids' Wear</div>
+    </section>
+    <section id="cosmetics">
+        <h2>Cosmetics</h2>
+        <div class="item">Lipstick</div>
+        <div class="item">Foundation</div>
+        <div class="item">Perfume</div>
+    </section>
+</body>
+</html>
 
