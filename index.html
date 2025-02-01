@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Marketplace</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background: #f4f4f4; }
+        header { background: #3498db; color: white; padding: 15px; }
+        #searchBox { width: 80%; padding: 10px; margin-top: 10px; }
+        .category, .product, .shop { border: 1px solid #ddd; padding: 15px; margin: 10px; display: inline-block; cursor: pointer; border-radius: 5px; background: white; }
+        .category { background: #2ecc71; color: white; font-weight: bold; }
+        .hidden { display: none; }
+        button { margin-top: 10px; padding: 10px; cursor: pointer; background: #e74c3c; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Online Marketplace</h1>
+        <input type="text" id="searchBox" placeholder="Search for a product..." onkeyup="searchProduct()">
+    </header>
+
+    <section id="categories">
+        <h2>Select a Category</h2>
+        <div class="category" onclick="showProducts('cakes')">Cakes</div>
+        <div class="category" onclick="showProducts('fruits')">Fruits</div>
+    </section>
+
+    <section id="productList" class="hidden">
+        <h2>Available Products</h2>
+        <div id="products"></div>
+    </section>
+
+    <section id="shopList" class="hidden">
+        <h2>Shops Selling This Product</h2>
+        <div id="shops"></div>
+    </section>
+
+    <script>
+        const productsData = {
+            cakes: [{ name: "Black Forest", weight: ["500g", "1kg"], shops: ["Shop A", "Shop B"] }],
+            fruits: [{ name: "Apple", weight: ["1kg", "2kg"], shops: ["Shop X", "Shop Y"] }]
+        };
+
+        function showProducts(category) {
+            document.getElementById("productList").classList.remove("hidden");
+            const productContainer = document.getElementById("products");
+            productContainer.innerHTML = "";
+            productsData[category].forEach(product => {
+                productContainer.innerHTML += `<div class="product" onclick="showShops('${product.name}', '${category}')">${product.name}</div>`;
+            });
+        }
+
+        function showShops(productName, category) {
+            document.getElementById("shopList").classList.remove("hidden");
+            const shopContainer = document.getElementById("shops");
+            shopContainer.innerHTML = "";
+            const product = productsData[category].find(p => p.name === productName);
+            product.shops.forEach(shop => {
+                shopContainer.innerHTML += `<div class="shop">${shop} <button onclick="order('${shop}')">Order</button></div>`;
+            });
+        }
+
+        function order(shop) {
+            alert(`Order placed at ${shop}! Choose Pickup or Delivery.`);
+        }
+
+        function searchProduct() {
+            const query = document.getElementById("searchBox").value.toLowerCase();
+            document.querySelectorAll(".product").forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(query) ? "inline-block" : "none";
+            });
+        }
+    </script>
+
+</body>
+</html>
