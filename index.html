@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Online Marketplace</h1>
+        <h1>LAZY SHOPPER</h1>
+        <p>"From Stores to Your Door"</p>
         <input type="text" id="searchBox" placeholder="Search for a product..." onkeyup="searchProduct()">
     </header>
 
     <section id="categories">
-        <h2>Select a Category</h2>
+        <h2>Need it? Tap it!</h2>
+        <p>Shop effortlessly from anywhere! Browse categorized products,<br> find what you need, and choose between pickup or home delivery. Simple, fast, and convenient—shopping made easy for everyone!</p>
         <div class="category" onclick="showProducts('cakes')">Cakes</div>
         <div class="category" onclick="showProducts('fruits')">Fruits</div>
-        <div class="category" onclick="showProducts('grocery items')">grocery items</div>
-        <div class="category" onclick="showProducts('study metirial')">study metirial</div>
-        <div class="category" onclick="showProducts('medicines')">medicines</div>
+        <div class="category" onclick="showProducts('grocery')">Grocery Items</div>
+        <div class="category" onclick="showProducts('study_material')">Study Material</div>
+        <div class="category" onclick="showProducts('medicines')">Medicines</div>
     </section>
 
     <section id="productList" class="hidden">
@@ -27,48 +28,23 @@
         <div id="products"></div>
     </section>
 
-    <section id="shopList" class="hidden">
-        <h2>Shops Selling This Product</h2>
-        <div id="shops"></div>
-    </section>
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <section id="shopList" class="hidden">
+            <div id="shops"></div>
+        </section>
+        <div class="modal-content">
+            <button onclick="showAvailableShops()">View Available Shops</button>    
+            <span class="close">&times;</span>
+            <img id="productImage" src="" alt="Product Image">
+            <h3 id="productName"></h3>
+            <p id="productSpecs"></p>
+            <div id="productWeights"></div>
+        </div>
+    </div>
 
-    <script>
-        const productsData = {
-            cakes: [{ name: "Black Forest,redvelvet,whiteforest,vancho", weight: ["500g", "1kg"], shops: ["cake studio", "freddocakes","royal bakes","golden sweet"] }],
-            fruits: [{ name: "Apple,orange,banana,mango,chikku,watermelon", weight: ["1kg", "2kg"], shops: ["fresh harvest","juicy bites","orchard bliss", "the fruity stop"] }]
-            grocery:[{name:"milk,chees,butter,yogurt,eggs"weight:["1kg","2kg"],shops["fms mart","gds"] }]
-        };
+    
 
-        function showProducts(category) {
-            document.getElementById("productList").classList.remove("hidden");
-            const productContainer = document.getElementById("products");
-            productContainer.innerHTML = "";
-            productsData[category].forEach(product => {
-                productContainer.innerHTML += `<div class="product" onclick="showShops('${product.name}', '${category}')">${product.name}</div>`;
-            });
-        }
-
-        function showShops(productName, category) {
-            document.getElementById("shopList").classList.remove("hidden");
-            const shopContainer = document.getElementById("shops");
-            shopContainer.innerHTML = "";
-            const product = productsData[category].find(p => p.name === productName);
-            product.shops.forEach(shop => {
-                shopContainer.innerHTML += `<div class="shop">${shop} <button onclick="order('${shop}')">Order</button></div>`;
-            });
-        }
-
-        function order(shop) {
-            alert(`Order placed at ${shop}! Choose Pickup or Delivery.`);
-        }
-
-        function searchProduct() {
-            const query = document.getElementById("searchBox").value.toLowerCase();
-            document.querySelectorAll(".product").forEach(item => {
-                item.style.display = item.textContent.toLowerCase().includes(query) ? "inline-block" : "none";
-            });
-        }
-    </script>
-
+    <script src="./scrpit.js"></script>
 </body>
 </html>
