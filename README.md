@@ -49,74 +49,39 @@ Optional: Use a local server (e.g., Live Server in VS Code) to run it
 
 # Run
 To run your project:
-1.	Open your project folder in Visual Studio Code.
-	2.	Install Live Server extension (if not already installed).
-	3.	Right-click index.html and select “Open with Live Server”.
+1. Open your project folder in Visual Studio Code.
+2. Install Live Server extension (if not already installed).
+3. Right-click index.html and select “Open with Live Server”.
 This will open your website in the browser.
 
 ### Project Documentation
 For Software:Software Documentation
 Overview: Online marketplace for product listings and shopping.
 Technologies: HTML, CSS, JavaScript.
-
 Features:
-
-	•	Search & filters.
-	•	Product listings.
-	•	Pickup/delivery options.
-
+ •Search & filters.
+• Product listings.
+• Pickup/delivery options.
 Setup: Open in code editor and run with Live Server.
-
 Conclusion: A simple platform for easy online shopping
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Team](Add photo of your team here)
-
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+![Screenshot1]
+![screenshot](https://github.com/user-attachments/assets/477d906e-49be-4719-89cb-2ee10d6c83d2)
+![Screenshot2]
+![s2](https://github.com/user-attachments/assets/2334d663-19f5-4042-90b7-8c87c1c9fbed)
+![Screenshot3]
+![s3](https://github.com/user-attachments/assets/499c5015-a32b-45f5-a800-89e9fefc3382)
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
+
+https://github.com/jumana-y/Me-/blob/main/2025-02-01%2016-54-38.mp4
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Name 1]:fathima jumana k -javascript and css
+- [Name 2]:ridha fathima ep -frontent
 
 ---
 Made with ❤️ at TinkerHub
